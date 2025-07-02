@@ -14,14 +14,62 @@ const products = [
   },
   {
     image: '/2.webp',
-    title: 'موضأ(سيراميك)',
-    desc: 'يتم التنفيذ بجانب مسجد',
+    title: 'بئر ارتوازي(سيراميك)',
+    desc: 'بمضخة يدوية وكهربائية وخزان',
     link: '#'
   },
   {
     image: '/3.webp',
-    title: 'بئر ارتوازي(سيراميك)',
-    desc: 'بمضخة يدوية وكهربائية وخزان',
+    title: 'متوضأ(سيراميك)',
+    desc: 'يتم التنفيذ بجانب مسجد',
+    link: '#'
+  },
+  {
+    image: '/6.webp',
+    title:'أضاحي/عقائق',
+    desc: 'توزع في اسيا وافريقيا',
+    link: '#'
+  },
+  {
+    image: '/11.png',
+    title: 'بئر كهربائي',
+    desc: 'بمضخة يدوية وكهربائية',
+    link: '#'
+  },
+  {
+    image: '/birirt_6_11zon.webp',
+    title: 'بئر ارتوازي (سيراميك)',
+    desc: 'بمضخة كهربائية وسيراميك فاخر',
+    link: '#'
+  },
+  {
+    image: '/birka_7_11zon.webp',
+    title: 'بركة مياه',
+    desc: 'تجميع مياه الأمطار أو الري',
+    link: '#'
+  },
+  {
+    image: '/birkasr.webp',
+    title: 'بركة صغيرة',
+    desc: 'تجميع مياه للاستخدامات المحدودة',
+    link: '#'
+  },
+  {
+    image: '/birst_8_11zon.webp',
+    title: 'بئر سطحي (يدوي)',
+    desc: 'بمضخة يدوية فقط',
+    link: '#'
+  },
+  {
+    image: '/motwada_9_11zon.webp',
+    title: 'موضأ (تقليدي)',
+    desc: 'تنفيذ بجانب مسجد أو مدرسة',
+    link: '#'
+  },
+  {
+    image: '/sarmek_10_11zon.webp',
+    title: 'بئر ارتوازي (سيراميك)',
+    desc: 'بمضخة كهربائية وسيراميك',
     link: '#'
   },
 ];
@@ -99,7 +147,7 @@ export default function Slider() {
   }, []);
 
   return (
-    <section className="w-full py-12 px-2 md:px-8 bg-white">
+    <section className="w-full py-12 mt-5 px-2 md:px-8 bg-white">
       <h2 className="text-3xl md:text-4xl font-extrabold text-[#B65B1B] text-center mb-10">الأكثر طلباً</h2>
       <Swiper
         modules={[Navigation]}

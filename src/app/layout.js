@@ -8,7 +8,7 @@ const cairo = Cairo({
 });
 
 export const metadata = {
-  title: "fagr alkher",
+  title: "فجر الخير",
   description: "Solutions de rénovation modernes pour maisons et appartements",
 };
 
