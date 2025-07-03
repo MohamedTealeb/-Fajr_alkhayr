@@ -12,51 +12,62 @@ const Navbar = () => {
     { href: "/home", label: "الرئيسية" },
     { href: "/about", label: "مشاريعنا" },
     { href: "/portfolio", label: "نبذة عنا" },
-    { href: "/services", label: "تواصل معنا" },
-    { href: "/contact", label: "الأسئلة الشائعة " },
-    { href: "/testimonials", label: "الشروط والأحكام" },
+    { href: "/contact", label: "تواصل معنا" },
+    { href: "/questions", label: "الأسئلة الشائعة " },
+    { href: "/terms", label: "الشروط والأحكام" },
   ];
 
-
   return (
-    <header  className={` bg-amber-800  text-black px-8 py-3  flex  items-center  shadow-md border-b border-secondary`}>
-      <h1 className="text-xl ml-6 font-bold text-black">
-       <Image src="/logohedar.webp" alt="Logo" width={120} height={60} />
-      </h1>
+    <header className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-400 text-white px-4 md:px-10 py-2 flex items-center justify-between shadow-lg border-b border-amber-200/40 sticky top-0 z-50 backdrop-blur-md">
+      {/* شعار داخل دائرة */}
+      <Link href="/home" className="flex items-center">
+        <Image src="/logohedar.webp" alt="Logo" width={130} height={56} className="rounded-full" />
+      </Link>
 
       {/* قائمة التصفح على الشاشات الكبيرة */}
-      <nav className="hidden md:flex items-center gap-6 py-2 px-4 ">
+      <nav className="hidden md:flex items-center ml-60 gap-1 lg:gap-4">
         {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="hover:text-accent transition-colors font-semibold"
+            className="relative px-3 py-1 font-bold text-lg text-white/90 hover:text-white transition group"
           >
-            {item.label}
+            <span className="group-hover:border-b-4 group-hover:border-white group-hover:pb-1 transition-all duration-200">{item.label}</span>
           </Link>
         ))}
+        {/* زر تبرع الآن */}
+        <Link href="/donate" className="ml-4">
+          <Button className="bg-white text-amber-700 font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-100 hover:text-amber-900 transition-all border-2 border-amber-300">
+            تبرع الآن
+          </Button>
+        </Link>
       </nav>
 
       {/* قائمة التصفح على الموبايل */}
       <div className="md:hidden flex items-center gap-2">
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" className="text-white bg-black p-0 cursor-pointer">
-              <HiMenu className="h-6 w-6" />
+            <Button variant="ghost" className="text-amber-900 bg-white/80 p-0 cursor-pointer shadow-md border border-amber-200">
+              <HiMenu className="h-7 w-7" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="bg-light text-main p-4">
+          <SheetContent side="left" className="bg-gradient-to-b from-amber-50 to-amber-100 text-amber-900 p-4 animate-slide-in">
             <SheetTitle className="sr-only">القائمة</SheetTitle>
             <nav className="mt-10 flex flex-col gap-6">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-lg font-semibold hover:text-accent"
+                  className="text-lg font-bold hover:text-amber-700 transition-all border-b border-amber-200 pb-2"
                 >
                   {item.label}
                 </Link>
               ))}
+              <Link href="/donate">
+                <Button className="w-full mt-4 bg-amber-700 text-white font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-800 transition-all">
+                  تبرع الآن
+                </Button>
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>
