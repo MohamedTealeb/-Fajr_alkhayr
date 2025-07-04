@@ -3,10 +3,17 @@
 import { FaRegClipboard, FaPhoneAlt, FaHandHoldingHeart, FaHammer, FaMoneyCheckAlt } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { useRouter } from 'next/navigation';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 const Text = () => {
+  const router = useRouter();
+
+  const handleAboutUs = () => {
+    router.push('/aboutus');
+  };
+
   const steps = [
     {
       icon: <FaHandHoldingHeart size={32} />, title: 'اختيار المشروع', num: 1,
@@ -53,7 +60,10 @@ const Text = () => {
           نحن في <span className="font-bold text-white">فجر الخير</span> <br/><br/>
           نكرس جهودنا لتنفيذ مشاريع خيرية مستدامة تُحدِث أثرًا عظيمًا في حياة المحتاجين. نقدم خدمات حفر الآبار، بناء المساجد، سقيا الماء، توزيع السلال الغذائية، وتقديم الرعاية الصحية، ساعين إلى تحقيق التنمية المستدامة وإنقاذ الأرواح. تبرعك معنا هو استثمار في الخير يدوم أثره لأجيال. كن جزءًا من العطاء وساهم في رسم البسمة على وجوه المحتاجين.
         </p>
-        <button className="bg-white text-[#B65B1B] font-bold rounded-full px-8 py-3 shadow-lg hover:bg-amber-100 hover:text-amber-900 transition-all text-lg mt-2 cursor-pointer">
+        <button 
+          onClick={handleAboutUs}
+          className="bg-white text-[#B65B1B] font-bold rounded-full px-8 py-3 shadow-lg hover:bg-amber-100 hover:text-amber-900 transition-all text-lg mt-2 cursor-pointer"
+        >
           تعرف علينا
         </button>
       </div>

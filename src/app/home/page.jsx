@@ -6,12 +6,14 @@ import Navbar from '@/components/shared/Navbar.jsx'
 import React from 'react'
 import Text from '@/components/sections/text';
 import Footer from '@/components/shared/Footer'
+import WhatsAppButton from '@/components/shared/WhatsAppButton'
 
 
 function page() {
   return (
     <>
    <Navbar />
+   <WhatsAppButton />
    <ImageSlider />
    <WaterAwarenessSection />
    <Slider  />

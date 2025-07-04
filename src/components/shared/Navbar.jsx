@@ -36,8 +36,8 @@ const Navbar = () => {
           </Link>
         ))}
         {/* زر تبرع الآن */}
-        <Link href="/donate" className="ml-4">
-          <Button className="bg-white text-amber-700 font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-100 hover:text-amber-900 transition-all border-2 border-amber-300">
+        <Link href="/project" className="ml-4">
+          <Button className="bg-white cursor-pointer text-amber-700 font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-100 hover:text-amber-900 transition-all border-2 border-amber-300">
             تبرع الآن
           </Button>
         </Link>
@@ -63,10 +63,10 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/donate">
-                <Button className="w-full mt-4 bg-amber-700 text-white font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-800 transition-all">
-                  تبرع الآن
-                </Button>
+                <Link href="/project">
+                  <Button className="w-full cursor-pointer mt-4 bg-amber-700 text-white font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-800 transition-all">
+                    تبرع الآن
+                  </Button>
               </Link>
             </nav>
           </SheetContent>

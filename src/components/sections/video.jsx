@@ -1,5 +1,13 @@
 'use client'
+import { useRouter } from 'next/navigation'
+
 const WaterAwarenessSection = () => {
+  const router = useRouter()
+
+  const handleProjectsClick = () => {
+    router.push('/project')
+  }
+
   return (
     <section className="relative w-full py-16 px-4 bg-gradient-to-b from-[#fff7f0] to-[#f5eee6] flex flex-col items-center justify-center overflow-hidden shadow-lg">
       {/* دائرة خلف الفيديو/الصورة */}
@@ -33,7 +41,12 @@ const WaterAwarenessSection = () => {
           <p className="text-base md:text-lg text-gray-600 mb-6 max-w-xl">
             تبرعك الآن يكون سببًا في توفير المياه النقية للمحتاجين ويترك أثرًا دائمًا.
           </p>
-          <button className="bg-[#B65B1B] cursor-pointer hover:bg-amber-700 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all text-lg">اطلب الآن</button>
+          <button 
+            onClick={handleProjectsClick}
+            className="bg-[#B65B1B] cursor-pointer hover:bg-amber-700 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all text-lg"
+          >
+            اطلع على المشاريع
+          </button>
         </div>
       </div>
     </section>

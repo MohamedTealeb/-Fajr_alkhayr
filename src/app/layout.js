@@ -1,5 +1,6 @@
 import { Cairo } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "../components/shared/WhatsAppButton";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"], // اختار الـ subsets اللي تحتاجها
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       {/* تستخدم className للخط */}
       <body className={`${cairo.variable} font-sans`}>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

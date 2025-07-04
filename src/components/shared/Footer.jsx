@@ -3,11 +3,11 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaTiktok, FaCcVisa, Fa
 import Image from 'next/image';
 
 const socials = [
-  { icon: <FaFacebookF />, link: '#' },
-  { icon: <FaInstagram />, link: '#' },
-  { icon: <FaYoutube />, link: '#' },
-  { icon: <FaWhatsapp />, link: '#' },
-  { icon: <FaTiktok />, link: '#' },
+  { icon: <FaFacebookF />, link: 'https://www.facebook.com/fajer.al5er' },
+  { icon: <FaInstagram />, link: 'https://www.instagram.com/fajer__alkhair' },
+  { icon: <FaYoutube />, link: 'https://www.youtube.com/@fajer.alkhair' },
+  { icon: <FaWhatsapp />, link: 'https://wa.me/962781607560' },
+  { icon: <FaTiktok />, link: 'https://www.tiktok.com/@fajer.alkhair?_t=8k0sba26uUp&_r=1' },
 ];
 
 const Footer = () => (
@@ -31,9 +31,15 @@ const Footer = () => (
       {/* معلومات الاتصال */}
       <div className="flex flex-col items-center md:items-start gap-3">
         <h3 className="text-2xl font-bold text-amber-400 mb-2">معلومات الاتصال</h3>
-        <div className="flex items-center gap-2"><FaPhoneAlt className="text-lg" /> 00962781607560</div>
-        <div className="flex items-center gap-2"><FaPhoneAlt className="text-lg" /> 00971502919085</div>
-        <div className="flex items-center gap-2"><FaEnvelope className="text-lg" /> info@fajeralkhair.com</div>
+        <a href="tel:+962781607560" className="flex items-center gap-2 hover:underline">
+          <FaPhoneAlt className="text-lg" /> 00962781607560
+        </a>
+        <a href="tel:+971502919085" className="flex items-center gap-2 hover:underline">
+          <FaPhoneAlt className="text-lg" /> 00971502919085
+        </a>
+        <a href="mailto:info@fajeralkhair.com" className="flex items-center gap-2 hover:underline">
+          <FaEnvelope className="text-lg" /> info@fajeralkhair.com
+        </a>
       </div>
     </div>
     {/* خط فاصل */}

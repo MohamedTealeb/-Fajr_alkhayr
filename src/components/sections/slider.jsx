@@ -2,6 +2,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { useRouter } from 'next/navigation';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -98,6 +99,12 @@ const leftArrowSVG = `
 `;
 
 export default function Slider() {
+  const router = useRouter();
+
+  const handleViewMore = () => {
+    router.push('/project');
+  };
+
   // تخصيص شكل الأسهم
   React.useEffect(() => {
     const style = document.createElement('style');
@@ -170,9 +177,12 @@ export default function Slider() {
               </div>
               <h3 className="text-xl font-bold text-[#B65B1B] mb-1 text-center">{product.title}</h3>
               <p className="text-gray-700 text-base mb-4 text-center">{product.desc}</p>
-              <a href={product.link} className="mt-auto">
-                <button className="bg-[#B65B1B] hover:bg-amber-700 text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all text-lg">عرض المزيد</button>
-              </a>
+              <button 
+                onClick={handleViewMore}
+                className="mt-auto bg-[#B65B1B] cursor-pointer  hover:bg-amber-700 text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all text-lg"
+              >
+                عرض المزيد
+              </button>
             </div>
           </SwiperSlide>
         ))}
