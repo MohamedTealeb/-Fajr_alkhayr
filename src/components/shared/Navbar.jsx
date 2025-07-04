@@ -10,8 +10,8 @@ import { HiMenu } from "react-icons/hi";
 const Navbar = () => {
   const navItems = [
     { href: "/home", label: "الرئيسية" },
-    { href: "/about", label: "مشاريعنا" },
-    { href: "/portfolio", label: "نبذة عنا" },
+    { href: "/project", label: "مشاريعنا" },
+    { href: "/aboutus", label: "نبذة عنا" },
     { href: "/contact", label: "تواصل معنا" },
     { href: "/questions", label: "الأسئلة الشائعة " },
     { href: "/terms", label: "الشروط والأحكام" },
