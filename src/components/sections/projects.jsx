@@ -138,7 +138,7 @@ export default function ProjectsSection() {
 
   // زر موحد أسفل كل كرت (ستايل عصري)
   const cardButtonStyle = {
-    background: "linear-gradient(90deg, #a05a13 0%, #e67c1c 100%)",
+    background: "linear-gradient(90deg, #B65B1B 0%",
     color: "#fff",
     border: "none",
     borderRadius: "0 0 24px 24px",
@@ -216,9 +216,9 @@ export default function ProjectsSection() {
               </div>
               <div style={{ width: "100%" }}>
                 <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 12px 0" }}>
-                  التكلفة: {currency === "AED" ? `${proj.priceAED} د.إ إماراتي` : `$${proj.priceUSD} دولار`}
+                  التكلفة: {currency === "AED" ? `${proj.priceAED} درهم إماراتي` : `$${proj.priceUSD} دولار`}
                 </div>
-                <button style={cardButtonStyle}>اطلب الان</button>
+                <button className="mt-4" style={cardButtonStyle}>اطلب الان</button>
               </div>
             </div>
           ))}
@@ -275,10 +275,10 @@ export default function ProjectsSection() {
                   <li key={i}>{line}</li>
                 ))}
               </ul>
-              <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 0 0" }}>
+              <div className="mt-3" style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 0 0" }}>
                 التكلفة: {currency === "AED" ? `${item.priceAED} درهم إماراتي` : `$${item.priceUSD} دولار`}
               </div>
-              <button style={cardButtonStyle}>اطلب الان</button>
+              <button  style={cardButtonStyle}>اطلب الان</button>
             </div>
           ))}
         </div>
@@ -371,7 +371,7 @@ export default function ProjectsSection() {
             <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "20px 0 0 0" }}>
               التكلفة: {currency === "AED" ? `300 درهم إماراتي` : `75$ دولار`}
             </div>
-            <button style={cardButtonStyle}>اطلب الان</button>
+            <button  style={cardButtonStyle}>اطلب الان</button>
           </div>
         </div>
         <style>{`

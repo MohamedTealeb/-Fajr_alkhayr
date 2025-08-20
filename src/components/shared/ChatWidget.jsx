@@ -9,8 +9,8 @@ const ChatWidget = ({ onClose }) => (
     <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-fade-in-up relative">
       {/* رأس الدردشة */}
       <div className="bg-green-400 flex items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2">
-          <img src="/logohedar.webp" alt="فجر الخير" className="w-10 h-10 rounded-full border-2 border-white" />
+        <div className="flex  items-center gap-2">
+          <img src="/LOGO.jpg" alt="فجر الخير" className="w-10  h-10 rounded-full border-2 " />
           <div>
             <div className="font-bold text-white text-lg">فجر الخير</div>
             <div className="text-xs text-white/80">عادةً ما يرد خلال دقائق</div>

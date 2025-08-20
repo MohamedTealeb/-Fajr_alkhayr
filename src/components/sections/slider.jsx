@@ -171,11 +171,11 @@ export default function Slider() {
       >
         {products.map((product, idx) => (
           <SwiperSlide key={idx}>
-            <div className="flex flex-col items-center justify-between bg-white rounded-3xl shadow-xl p-6 mx-2 min-h-[340px] transition-all duration-300 hover:scale-105 group">
-              <div className="-mt-12 mb-2 w-32 h-32 flex items-center justify-center">
-                <img src={product.image} alt={product.title} className="w-full h-full object-contain drop-shadow-lg group-hover:-translate-y-2 transition-all duration-300" />
+            <div className="flex flex-col items-center justify-between bg-white rounded-3xl p-6 mx-2 min-h-[340px] transition-all duration-300 hover:scale-105 group">
+              <div className="mt-12 mb-2 w-96 h-32 flex items-center justify-center">
+                <img src={product.image} alt={product.title} className="w-full h-[full] object-contain drop-shadow-lg group-hover:-translate-y-2 transition-all duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-[#B65B1B] mb-1 text-center">{product.title}</h3>
+              <h3 className="text-xl font-bold text-[#B65B1B] mt-18 text-center">{product.title}</h3>
               <p className="text-gray-700 text-base mb-4 text-center">{product.desc}</p>
               <button 
                 onClick={handleViewMore}
