@@ -15,7 +15,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
       {/* شعار واسم */}
       <div className="flex flex-col items-center md:items-end gap-2">
-        <Image src="/logohedar.webp" alt="فجر الخير" width={120} height={80} className="mb-2" />
+        <Image src="/data.json" alt="فجر الخير" width={120} height={80} className="mb-2" />
       </div>
       {/* سوشيال ميديا */}
       <div className="flex flex-col items-center gap-3">
