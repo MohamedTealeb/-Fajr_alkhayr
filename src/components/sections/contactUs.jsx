@@ -7,12 +7,21 @@ const ContactUs = () => {
 
   useEffect(() => {
     if (lottieContainer.current) {
+      console.log('Loading Lottie animation...'); // Debug log
       const animation = lottie.loadAnimation({
         container: lottieContainer.current,
         renderer: 'svg',
         loop: true,
         autoplay: true,
         path: '/data.json'
+      });
+
+      animation.addEventListener('complete', () => {
+        console.log('Lottie animation loaded successfully');
+      });
+
+      animation.addEventListener('error', (error) => {
+        console.error('Lottie animation error:', error);
       });
 
       return () => animation.destroy();
@@ -38,11 +47,15 @@ const ContactUs = () => {
       {/* خط فاصل رأسي */}
       <div className="hidden md:block h-[80%] border-r border-amber-100 mx-4 md:mx-8 self-start" />
       {/* يمين: معلومات التواصل */}
-      <div className="flex-1 flex flex-col items-center md:items-start justify-start mt-8 md:mt-0 self-start px-1 sm:px-2 w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-900 mb-4 text-center md:text-right">تواصل معنا</h2>
-        <div className="col-lg-3 col-12 mb-4">
-            <div ref={lottieContainer} style={{ width: '150px', height: '150px' }} />
-          </div>        <hr className="w-2/3 my-4 border-amber-200" />
+              <div className="flex-1 flex flex-col items-center md:items-start justify-start mt-8 md:mt-0 self-start px-1 sm:px-2 w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-900 mb-4 text-center md:text-right">تواصل معنا</h2>
+          <div className="col-lg-3 col-12 mb-4">
+            <div ref={lottieContainer} style={{ width: '150px', height: '150px' }}>
+              {/* Fallback image in case Lottie fails to load */}
+              <img src="/LOGO.jpg" alt="فجر الخير" style={{ width: '150px', height: '150px', objectFit: 'contain' }} />
+            </div>
+          </div>
+          <hr className="w-2/3 my-4 border-amber-200" />
         <div className="w-full max-w-xs mx-auto md:mx-0">
           <h3 className="text-lg sm:text-xl font-bold text-[#F37021] mb-2">معلومات الاتصال</h3>
           <div className="flex items-center gap-2 text-gray-700 mb-1 text-sm sm:text-base">

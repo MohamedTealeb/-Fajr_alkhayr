@@ -10,7 +10,20 @@ const cairo = Cairo({
 
 export const metadata = {
   title: "فجر الخير",
-  description: "Solutions de rénovation modernes pour maisons et appartements",
+  description: "فجر الخير | جمعية حفر الآبار والأعمال الخيرية",
+  icons: {
+    icon: "/LOGO.jpg",
+    shortcut: "/LOGO.jpg",
+    apple: "/LOGO.jpg",
+  },
+  images: [
+    {
+      url: "/LOGO.jpg",
+      width: 900,
+      height: 900,
+      alt: "شعار فجر الخير",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
