@@ -18,10 +18,10 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-400 text-white px-4 md:px-10 py-2 flex items-center justify-between shadow-lg border-b border-amber-200/40 sticky top-0 z-50 backdrop-blur-md">
+    <header className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 text-white px-4 md:px-10 py-2 flex items-center justify-between shadow-lg border-b border-amber-200/40 sticky top-0 z-50 backdrop-blur-md">
       {/* شعار داخل دائرة */}
       <Link href="/home" className="flex items-center">
-        <Image src="/logohedar.webp" alt="Logo" width={130} height={56} className="rounded-full" />
+        <Image src="/logohedar.webp" alt="Logo" width={130} height={56} />
       </Link>
 
       {/* قائمة التصفح على الشاشات الكبيرة */}
@@ -36,10 +36,8 @@ const Navbar = () => {
           </Link>
         ))}
         {/* زر تبرع الآن */}
-        <Link href="/project" className="ml-4">
-          <Button className="bg-white cursor-pointer text-amber-700 font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-100 hover:text-amber-900 transition-all border-2 border-amber-300">
-            تبرع الآن
-          </Button>
+        <Link href="/project" className="ml-2 lg:ml-4">
+          
         </Link>
       </nav>
 
@@ -63,11 +61,7 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-                <Link href="/project">
-                  <Button className="w-full cursor-pointer mt-4 bg-amber-700 text-white font-bold rounded-full px-6 py-2 shadow-lg hover:bg-amber-800 transition-all">
-                    تبرع الآن
-                  </Button>
-              </Link>
+              
             </nav>
           </SheetContent>
         </Sheet>

@@ -35,7 +35,14 @@ const Footer = () => {
         {/* شعار واسم */}
         <div className="flex flex-col items-center md:items-end gap-2">
           <div className="col-lg-3 col-12 mb-4">
-            <div ref={lottieContainer} style={{ width: '150px', height: '150px' }} />
+            <div 
+              ref={lottieContainer} 
+              style={{ 
+                width: '150px', 
+                height: '150px',
+                filter: 'brightness(0) invert(1)'
+              }} 
+            />
           </div>
         </div>
       {/* سوشيال ميديا */}

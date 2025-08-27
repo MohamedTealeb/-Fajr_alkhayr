@@ -138,22 +138,44 @@ export default function ProjectsSection() {
 
   // زر موحد أسفل كل كرت (ستايل عصري)
   const cardButtonStyle = {
-    background: "linear-gradient(90deg, #B65B1B 0%",
+    background: "linear-gradient(135deg, #B65B1B 0%, #9d4c17 100%)",
     color: "#fff",
     border: "none",
-    borderRadius: "0 0 24px 24px",
-    padding: "12px 0",
-    fontSize: 18,
+    borderRadius: "12px",
+    padding: "14px 24px",
+    fontSize: "16px",
     cursor: "pointer",
     width: "100%",
-    margin: 0,
-    fontWeight: 900,
-    letterSpacing: 1,
-    boxShadow: "0 4px 16px #0002",
-    transition: "all 0.18s cubic-bezier(.4,2,.6,1)",
+    margin: "16px 0 0 0",
+    fontWeight: "700",
+    letterSpacing: "0.5px",
+    boxShadow: "0 4px 20px rgba(182, 91, 27, 0.3)",
+    transition: "all 0.3s ease",
     outline: "none",
     position: "relative",
     zIndex: 2,
+    textAlign: "center",
+    minHeight: "48px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    touchAction: "manipulation"
+  };
+
+  const viewModelButtonStyle = {
+    background: "linear-gradient(135deg, #B65B1B 0%, #9d4c17 100%)",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    padding: "10px 20px",
+    fontSize: "14px",
+    cursor: "pointer",
+    fontWeight: "600",
+    boxShadow: "0 2px 10px rgba(182, 91, 27, 0.3)",
+    transition: "all 0.3s ease",
+    outline: "none",
+    marginBottom: "16px",
+    touchAction: "manipulation"
   };
 
   return (
@@ -202,7 +224,7 @@ export default function ProjectsSection() {
               <div style={{ width: "100%" }}>
                 <img src={proj.image} alt={proj.title} style={{ width: "100%", height: 200, objectFit: "contain", marginBottom: 16 }} />
                 <button
-                  style={{ background: "#e67c1c", color: "#fff", border: 0, borderRadius: 8, padding: "8px 24px", fontSize: 16, cursor: "pointer", marginBottom: 16 }}
+                  style={viewModelButtonStyle}
                   onClick={() => openModal(proj.modelGlb)}
                 >
                   عرض النموذج
@@ -218,7 +240,7 @@ export default function ProjectsSection() {
                 <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 12px 0" }}>
                   التكلفة: {currency === "AED" ? `${proj.priceAED} درهم إماراتي` : `$${proj.priceUSD} دولار`}
                 </div>
-                <button className="mt-4" style={cardButtonStyle}>اطلب الان</button>
+                <button style={cardButtonStyle}>اطلب الآن</button>
               </div>
             </div>
           ))}
@@ -278,7 +300,7 @@ export default function ProjectsSection() {
               <div className="mt-3" style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 0 0" }}>
                 التكلفة: {currency === "AED" ? `${item.priceAED} درهم إماراتي` : `$${item.priceUSD} دولار`}
               </div>
-              <button  style={cardButtonStyle}>اطلب الان</button>
+              <button style={cardButtonStyle}>اطلب الآن</button>
             </div>
           ))}
         </div>
@@ -320,7 +342,7 @@ export default function ProjectsSection() {
                 <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "20px 0 0 0" }}>
                   التكلفة: {currency === "AED" ? `${priceAED} درهم إماراتي` : `${count === 25 ? '125' : '250'}$ دولار`}
                 </div>
-                <button style={cardButtonStyle}>اطلب الان</button>
+                <button style={cardButtonStyle}>اطلب الآن</button>
               </div>
             );
           })}
@@ -371,21 +393,22 @@ export default function ProjectsSection() {
             <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "20px 0 0 0" }}>
               التكلفة: {currency === "AED" ? `300 درهم إماراتي` : `75$ دولار`}
             </div>
-            <button  style={cardButtonStyle}>اطلب الان</button>
+            <button style={cardButtonStyle}>اطلب الآن</button>
           </div>
         </div>
         <style>{`
-          button[style*='linear-gradient'] {
+          /* تأثيرات الأزرار الرئيسية والثانوية */
+          button[style*='#B65B1B'] {
             will-change: transform, box-shadow, background;
           }
-          button[style*='linear-gradient']:hover {
-            background: linear-gradient(90deg, #e67c1c 0%, #a05a13 100%);
-            box-shadow: 0 8px 24px #0003;
-            transform: translateY(-2px) scale(1.03);
+          button[style*='#B65B1B']:hover {
+            background: linear-gradient(135deg, #9d4c17 0%, #8a4215 100%) !important;
+            box-shadow: 0 6px 25px rgba(182, 91, 27, 0.4) !important;
+            transform: translateY(-2px) !important;
           }
-          button[style*='linear-gradient']:active {
-            transform: scale(0.97);
-            box-shadow: 0 2px 8px #0002;
+          button[style*='#B65B1B']:active {
+            transform: translateY(0px) scale(0.98) !important;
+            box-shadow: 0 2px 10px rgba(182, 91, 27, 0.3) !important;
           }
           @media (max-width: 900px) {
             section > div[style*='display: flex'], section > div[style*='display: grid'] {
@@ -431,12 +454,24 @@ export default function ProjectsSection() {
               margin: 0 auto 10px auto !important;
               display: block !important;
             }
-            button[style*='linear-gradient'] {
+            /* تحسين الأزرار للهواتف المحمولة */
+            button[style*='#B65B1B'] {
               font-size: 16px !important;
-              padding: 10px 0 !important;
+              padding: 16px 20px !important;
               border-radius: 12px !important;
-              margin-bottom: 0 !important;
-              margin-top: 10px !important;
+              margin: 16px 0 0 0 !important;
+              min-height: 50px !important;
+              touch-action: manipulation !important;
+              width: 100% !important;
+            }
+            /* أزرار عرض النموذج على المحمول */
+            button[style*='#B65B1B'][style*='14px'] {
+              font-size: 14px !important;
+              padding: 12px 18px !important;
+              border-radius: 8px !important;
+              margin-bottom: 16px !important;
+              min-height: 44px !important;
+              width: auto !important;
             }
           }
         `}</style>

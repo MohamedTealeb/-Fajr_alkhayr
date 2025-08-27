@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const AnimatedNumber = ({ target, step = 300, delay = 700 }) => {
+const AnimatedNumber = ({ target, step = 100, delay = 50 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
