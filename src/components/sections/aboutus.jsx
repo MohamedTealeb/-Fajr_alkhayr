@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const AnimatedNumber = ({ target, step = 100, delay = 50 }) => {
+const AnimatedNumber = ({ target, step = 50, delay = 10 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -56,11 +56,11 @@ const AboutUs = () => {
           <div className="flex flex-col items-center md:items-start">
             <span className="text-gray-600 text-lg mb-1">تأسست</span>
             <span className="text-4xl font-extrabold text-[#F37021] mb-2">
-              <AnimatedNumber target={2021} step={300} delay={700} />
+              <AnimatedNumber target={2021} step={50} delay={5} />
             </span>
             <span className="text-gray-600 text-lg mb-1">نفذنا أكثر من</span>
             <span className="text-4xl font-extrabold text-[#F37021]">
-              <AnimatedNumber target={1000} step={300} delay={700} />
+              <AnimatedNumber target={1000} step={25} delay={5} />
             </span>
             <span className="text-gray-600 text-lg">مشروع</span>
           </div>
