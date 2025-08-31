@@ -434,6 +434,9 @@ export default function ProjectsSection() {
               min-width: unset !important;
               padding: 12px !important;
               overflow: hidden !important;
+              display: flex !important;
+              flex-direction: column !important;
+              align-items: center !important;
             }
           }
           @media (max-width: 600px) {
@@ -469,10 +472,12 @@ export default function ProjectsSection() {
               font-size: 16px !important;
               padding: 16px 20px !important;
               border-radius: 12px !important;
-              margin: 16px 0 0 0 !important;
+              margin: 16px auto 0 auto !important;
               min-height: 50px !important;
               touch-action: manipulation !important;
               width: 100% !important;
+              display: block !important;
+              text-align: center !important;
             }
             /* أزرار عرض النموذج على المحمول */
             button[style*='#B65B1B'][style*='14px'] {
