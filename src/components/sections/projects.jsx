@@ -11,10 +11,12 @@ const projectsData = [
       "العمق 15-20 متر",
       "ينتفع به من 6 لـ 10 عائلات يومياً على الأقل"
     ],
-    image: "/sarmek_10_11zon.webp",
+    image: "/birkasr.webp",
     priceAED: 1660,
     priceUSD: 450,
-    modelGlb: "/model/birkasr.glb"
+    modelGlb: "/model/birkasr.glb",
+    orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/byr-khrbyy-syrmyk"
+    
   },
   {
     title: "بئر كهربي",
@@ -27,7 +29,8 @@ const projectsData = [
     image: "/birka_7_11zon.webp",
     priceAED: 1450,
     priceUSD: 390,
-    modelGlb: "/model/birka.glb"
+    modelGlb: "/model/birka.glb",
+    orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/byr-sthy-khrbyy-739635"
   },
   {
     title: "بئر سطحي",
@@ -40,7 +43,8 @@ const projectsData = [
     image: "/birst_8_11zon.webp",
     priceAED: 900,
     priceUSD: 240,
-    modelGlb: "/model/birst.glb"
+    modelGlb: "/model/birst.glb",
+    orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/byr-sthy-bmdkh-ydwy-739632"
   },
   {
     title: "بئر ارتوازي مع مقوضاً (سيراميك)",
@@ -53,7 +57,8 @@ const projectsData = [
     image: "/motwada_9_11zon.webp",
     priceAED: 6250,
     priceUSD: 1700,
-    modelGlb: "/model/motwada.glb"
+    modelGlb: "/model/motwada.glb",
+    orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/mtwd-md-lhy-bjnb-msjd-w-mdrs"
   },
   {
     title: "بئر ارتوازي (سيراميك)",
@@ -66,7 +71,8 @@ const projectsData = [
     image: "/sarmek_10_11zon.webp",
     priceAED: 3125,
     priceUSD: 850,
-    modelGlb: "/model/seramek.glb"
+    modelGlb: "/model/seramek.glb",
+    orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/byr-rtwzy-md-lhy-739640"
   },
   {
     title: "بئر ارتوازي",
@@ -79,7 +85,8 @@ const projectsData = [
     image: "/birirt_6_11zon.webp",
     priceAED: 1835,
     priceUSD: 500,
-    modelGlb: "/model/birir.glb"
+    modelGlb: "/model/birir.glb",
+    orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/byr-bmdkhh-khrbyy-myq-bhnfytyn-wkhzn"
   },
 ];
 
@@ -121,7 +128,8 @@ export default function ProjectsSection() {
         "لحم صافي بعد السلخ والتقطيع"
       ],
       priceAED: 1850,
-      priceUSD: 500
+      priceUSD: 500,
+      orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/bqr-jl"
     },
     {
       title: "خروف",
@@ -132,7 +140,8 @@ export default function ProjectsSection() {
         "لحم صافي من 10-15 كيلو"
       ],
       priceAED: 735,
-      priceUSD: 200
+      priceUSD: 200,
+      orderUrl: "https://fajer-alkhair-us.zbooni.com/ar/products/khrwf-qyqh"
     }
   ];
 
@@ -240,7 +249,7 @@ export default function ProjectsSection() {
                 <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 12px 0" }}>
                   التكلفة: {currency === "AED" ? `${proj.priceAED} درهم إماراتي` : `$${proj.priceUSD} دولار`}
                 </div>
-                <button style={cardButtonStyle}>اطلب الآن</button>
+                <button style={cardButtonStyle} onClick={() => window.open(proj.orderUrl, '_blank')}>اطلب الآن</button>
               </div>
             </div>
           ))}
@@ -300,7 +309,7 @@ export default function ProjectsSection() {
               <div className="mt-3" style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "16px 0 0 0" }}>
                 التكلفة: {currency === "AED" ? `${item.priceAED} درهم إماراتي` : `$${item.priceUSD} دولار`}
               </div>
-              <button style={cardButtonStyle}>اطلب الآن</button>
+              <button style={cardButtonStyle} onClick={() => window.open(item.orderUrl, '_blank')}>اطلب الآن</button>
             </div>
           ))}
         </div>
@@ -318,6 +327,7 @@ export default function ProjectsSection() {
           {[25, 50].map((count, idx) => {
             const priceAED = count === 25 ? 500 : 1000;
             const imgSrc = count === 25 ? "/model/25quran.webp" : "/model/50quran.webp";
+            const orderUrl = count === 25 ? "https://fajer-alkhair-us.zbooni.com/ar/products/twzy-100-mshf-1011334" : "https://fajer-alkhair-us.zbooni.com/ar/products/twzy-50-mshf-1023726";
             return (
               <div key={count} style={{
                 background: "#fcf8f3",
@@ -340,9 +350,9 @@ export default function ProjectsSection() {
                   قال رسول الله ﷺ "خيركم من تعلم القرآن وعلمه" ومن هذا المنطلق نسعى إلى طباعة المصحف الشريف، وتوزيعه، في المدارس والمساجد ودور تحفيظ القرأن
                 </div>
                 <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "20px 0 0 0" }}>
-                  التكلفة: {currency === "AED" ? `${priceAED} درهم إماراتي` : `${count === 25 ? '125' : '250'}$ دولار`}
+                  التكلفة: {currency === "AED" ? `${priceAED} درهم إماراتي` : `${count === 25 ? '125' : '200'}$ دولار`}
                 </div>
-                <button style={cardButtonStyle}>اطلب الآن</button>
+                <button style={cardButtonStyle} onClick={() => window.open(orderUrl, '_blank')}>اطلب الآن</button>
               </div>
             );
           })}
@@ -393,7 +403,7 @@ export default function ProjectsSection() {
             <div style={{ color: "#555", fontWeight: 700, fontSize: 22, margin: "20px 0 0 0" }}>
               التكلفة: {currency === "AED" ? `300 درهم إماراتي` : `75$ دولار`}
             </div>
-            <button style={cardButtonStyle}>اطلب الآن</button>
+            <button style={cardButtonStyle} onClick={() => window.open('https://fajer-alkhair-us.zbooni.com/ar/products/sl-gdhyy-1007385', '_blank')}>اطلب الآن</button>
           </div>
         </div>
         <style>{`
